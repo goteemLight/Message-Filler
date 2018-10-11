@@ -13,12 +13,10 @@ int main(int argc, char** argv)
 
     //Parse user input.
     char *texttoduplicate = argv[1];
-    printf("%s", texttoduplicate);
     int messagecharactercap = atoi(argv[2]);
-    printf("%i", messagecharactercap);
 
     //Store the length of the duplicated text to know when the program should stop duplicating text.
-    int textlength = str
+    int textlength = strlen(texttoduplicate);
 
     FILE *copypasta = fopen("copypasta.txt", "w+");
 
