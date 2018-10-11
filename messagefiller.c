@@ -16,7 +16,7 @@ int main(int argc, char** argv)
     int messagecharactercap = atoi(argv[2]);
 
     //Store the length of the duplicated text to know when the program should stop duplicating text.
-    int textlength = strlen(texttoduplicate);
+    int textlength = strlen(texttoduplicate) + 1;
 
     FILE *copypasta = fopen("copypasta.txt", "w+");
 
@@ -34,6 +34,7 @@ int main(int argc, char** argv)
     while (charactercount + textlength < messagecharactercap)
     {
         fputs(texttoduplicate, copypasta);
+        fputc(' ', copypasta);
         charactercount += textlength;
     }
 
