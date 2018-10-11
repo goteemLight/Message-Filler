@@ -31,7 +31,7 @@ int main(int argc, char** argv)
     int charactercount = 0;
 
     //Keep on duplicating text into a file until it exceeds the user inputted message character cap.
-    while (charactercount < messagecharactercap)
+    while (charactercount + textlength < messagecharactercap)
     {
         fputs(texttoduplicate, copypasta);
         charactercount += textlength;
