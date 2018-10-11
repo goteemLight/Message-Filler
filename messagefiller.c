@@ -1,10 +1,8 @@
-//Neo
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-int main(int argc, char* argv[])
+int main(int argc, char** argv)
 {
     //Make sure the user is using the program correctly.
     if (argc != 3)
@@ -14,13 +12,15 @@ int main(int argc, char* argv[])
     }
 
     //Parse user input.
-    int messagecharactercap = atoi(argv[1]);
-    char *texttoduplicate = argv[2];
+    char *texttoduplicate = argv[1];
+    printf("%s", texttoduplicate);
+    int messagecharactercap = atoi(argv[2]);
+    printf("%i", messagecharactercap);
 
     //Store the length of the duplicated text to know when the program should stop duplicating text.
-    int textlength = strlen(texttoduplicate);
+    int textlength = str
 
-    FILE *copypasta = fopen("copypasta.txt", "w");
+    FILE *copypasta = fopen("copypasta.txt", "w+");
 
     //Make sure file was created.
     if (!copypasta)
@@ -40,5 +40,4 @@ int main(int argc, char* argv[])
     }
 
     fclose(copypasta);
-
 }
